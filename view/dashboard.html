@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+    <span class="sr-only">Open sidebar</span>
+    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+    </svg>
+</button>
+<aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <ul class="space-y-2 font-medium">
+            <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <img src="asset/img/Digihero%20Logo.png">
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M1.11111 11.1111H7.77778C8.38889 11.1111 8.88889 10.6111 8.88889 10V1.11111C8.88889 0.5 8.38889 0 7.77778 0H1.11111C0.5 0 0 0.5 0 1.11111V10C0 10.6111 0.5 11.1111 1.11111 11.1111ZM1.11111 20H7.77778C8.38889 20 8.88889 19.5 8.88889 18.8889V14.4444C8.88889 13.8333 8.38889 13.3333 7.77778 13.3333H1.11111C0.5 13.3333 0 13.8333 0 14.4444V18.8889C0 19.5 0.5 20 1.11111 20ZM12.2222 20H18.8889C19.5 20 20 19.5 20 18.8889V10C20 9.38889 19.5 8.88889 18.8889 8.88889H12.2222C11.6111 8.88889 11.1111 9.38889 11.1111 10V18.8889C11.1111 19.5 11.6111 20 12.2222 20ZM11.1111 1.11111V5.55556C11.1111 6.16667 11.6111 6.66667 12.2222 6.66667H18.8889C19.5 6.66667 20 6.16667 20 5.55556V1.11111C20 0.5 19.5 0 18.8889 0H12.2222C11.6111 0 11.1111 0.5 11.1111 1.11111Z" fill="#012A4A"/>
+                    </svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Dashboard</span>
+                    <span class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <g clip-path="url(#clip0_111_483)">
+                            <path d="M5 2.5C5 1.12109 5.89688 0 7 0H18C19.1031 0 20 1.12109 20 2.5V13.75C20 15.1289 19.1031 16.25 18 16.25H10.525C10.1562 15.2539 9.59062 14.3945 8.8875 13.75H12V12.5C12 11.8086 12.4469 11.25 13 11.25H15C15.5531 11.25 16 11.8086 16 12.5V13.75H18V2.5H7V4.41797C6.4125 3.99219 5.72813 3.75 5 3.75V2.5ZM5 5C5.39397 5 5.78407 5.097 6.14805 5.28545C6.51203 5.47391 6.84274 5.75013 7.12132 6.09835C7.3999 6.44657 7.62087 6.85997 7.77164 7.31494C7.9224 7.76991 8 8.25754 8 8.75C8 9.24246 7.9224 9.73009 7.77164 10.1851C7.62087 10.64 7.3999 11.0534 7.12132 11.4017C6.84274 11.7499 6.51203 12.0261 6.14805 12.2145C5.78407 12.403 5.39397 12.5 5 12.5C4.60603 12.5 4.21593 12.403 3.85195 12.2145C3.48797 12.0261 3.15726 11.7499 2.87868 11.4017C2.6001 11.0534 2.37913 10.64 2.22836 10.1851C2.0776 9.73009 2 9.24246 2 8.75C2 8.25754 2.0776 7.76991 2.22836 7.31494C2.37913 6.85997 2.6001 6.44657 2.87868 6.09835C3.15726 5.75013 3.48797 5.47391 3.85195 5.28545C4.21593 5.097 4.60603 5 5 5ZM4.16563 13.75H5.83125C8.13438 13.75 10 16.082 10 18.957C10 19.5312 9.62812 20 9.16562 20H0.834375C0.371875 20 0 19.5352 0 18.957C0 16.082 1.86563 13.75 4.16563 13.75Z" fill="#BFBFBF"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_111_483">
+                                <rect width="20" height="20" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Data Heroes</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <g clip-path="url(#clip0_111_489)">
+                            <path d="M10 10C11.5155 10 12.969 9.47322 14.0406 8.53553C15.1122 7.59785 15.7143 6.32608 15.7143 5C15.7143 3.67392 15.1122 2.40215 14.0406 1.46447C12.969 0.526784 11.5155 0 10 0C8.48448 0 7.03103 0.526784 5.95939 1.46447C4.88775 2.40215 4.28571 3.67392 4.28571 5C4.28571 6.32608 4.88775 7.59785 5.95939 8.53553C7.03103 9.47322 8.48448 10 10 10ZM7.95982 11.875C3.5625 11.875 0 14.9922 0 18.8398C0 19.4805 0.59375 20 1.32589 20H18.6741C19.4062 20 20 19.4805 20 18.8398C20 14.9922 16.4375 11.875 12.0402 11.875H7.95982Z" fill="#BFBFBF"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_111_489">
+                                <rect width="20" height="20" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Data Applicants</span>
+                    <span class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.984 0.542C12.071 0.711 12.093 0.928 12.136 1.362C12.218 2.182 12.259 2.592 12.431 2.818C12.5382 2.95832 12.6806 3.06777 12.8437 3.13522C13.0069 3.20266 13.185 3.2257 13.36 3.202C13.64 3.165 13.96 2.904 14.598 2.382C14.935 2.105 15.104 1.967 15.285 1.909C15.5155 1.83534 15.7649 1.84777 15.987 1.944C16.162 2.02 16.317 2.174 16.624 2.482L17.518 3.376C17.826 3.684 17.98 3.838 18.056 4.013C18.1522 4.23506 18.1647 4.48447 18.091 4.715C18.033 4.896 17.895 5.065 17.619 5.402C17.096 6.041 16.835 6.36 16.797 6.641C16.7736 6.8159 16.7969 6.99387 16.8645 7.15686C16.9321 7.31985 17.0417 7.46204 17.182 7.569C17.407 7.741 17.818 7.782 18.639 7.864C19.072 7.907 19.289 7.929 19.459 8.016C19.6735 8.1272 19.8404 8.31227 19.929 8.537C20 8.714 20 8.932 20 9.368V10.632C20 11.068 20 11.286 19.93 11.462C19.8411 11.6874 19.6734 11.8729 19.458 11.984C19.289 12.071 19.072 12.093 18.638 12.136C17.818 12.218 17.408 12.259 17.182 12.431C17.0417 12.5382 16.9322 12.6806 16.8648 12.8437C16.7973 13.0069 16.7743 13.185 16.798 13.36C16.836 13.64 17.097 13.96 17.619 14.598C17.895 14.935 18.033 15.103 18.091 15.285C18.1647 15.5155 18.1522 15.7649 18.056 15.987C17.98 16.162 17.826 16.316 17.518 16.624L16.624 17.517C16.316 17.826 16.162 17.98 15.987 18.055C15.7649 18.1512 15.5155 18.1637 15.285 18.09C15.104 18.032 14.935 17.894 14.598 17.618C13.959 17.096 13.64 16.835 13.36 16.798C13.185 16.7743 13.0069 16.7973 12.8437 16.8648C12.6806 16.9322 12.5382 17.0417 12.431 17.182C12.259 17.407 12.218 17.817 12.136 18.638C12.093 19.072 12.071 19.289 11.984 19.458C11.8732 19.6732 11.6881 19.8409 11.463 19.93C11.286 20 11.068 20 10.632 20H9.368C8.932 20 8.714 20 8.538 19.93C8.31256 19.8411 8.12706 19.6734 8.016 19.458C7.929 19.289 7.907 19.072 7.864 18.638C7.782 17.818 7.741 17.408 7.569 17.182C7.46192 17.0418 7.31968 16.9325 7.1567 16.8651C6.99372 16.7976 6.81581 16.7745 6.641 16.798C6.36 16.835 6.041 17.096 5.402 17.618C5.065 17.895 4.896 18.033 4.715 18.091C4.48447 18.1647 4.23506 18.1522 4.013 18.056C3.838 17.98 3.683 17.826 3.376 17.518L2.482 16.624C2.174 16.316 2.02 16.162 1.944 15.987C1.84777 15.7649 1.83534 15.5155 1.909 15.285C1.967 15.104 2.105 14.935 2.381 14.598C2.904 13.959 3.165 13.64 3.202 13.359C3.22552 13.1842 3.20239 13.0063 3.13495 12.8433C3.06751 12.6803 2.95816 12.5381 2.818 12.431C2.593 12.259 2.182 12.218 1.361 12.136C0.928 12.093 0.711 12.071 0.541 11.984C0.326547 11.8728 0.159596 11.6877 0.0710001 11.463C9.68575e-08 11.286 0 11.068 0 10.632V9.368C0 8.932 -6.70552e-08 8.714 0.0699999 8.538C0.158887 8.31256 0.326615 8.12706 0.542 8.016C0.711 7.929 0.928 7.907 1.362 7.864C2.182 7.782 2.593 7.741 2.818 7.569C2.95834 7.46204 3.06788 7.31985 3.1355 7.15686C3.20312 6.99387 3.22641 6.8159 3.203 6.641C3.165 6.36 2.903 6.041 2.381 5.401C2.105 5.064 1.967 4.896 1.909 4.714C1.83534 4.48347 1.84777 4.23406 1.944 4.012C2.02 3.838 2.174 3.683 2.482 3.375L3.376 2.482C3.684 2.174 3.838 2.019 4.013 1.944C4.23506 1.84777 4.48447 1.83534 4.715 1.909C4.896 1.967 5.065 2.105 5.402 2.381C6.041 2.903 6.36 3.164 6.64 3.202C6.81521 3.22578 6.9936 3.20267 7.15697 3.13504C7.32034 3.06741 7.46286 2.95766 7.57 2.817C7.74 2.592 7.782 2.182 7.864 1.361C7.907 0.928 7.929 0.711 8.016 0.541C8.12701 0.326171 8.3121 0.158843 8.537 0.0699999C8.714 -6.70552e-08 8.932 0 9.368 0H10.632C11.068 0 11.286 -6.70552e-08 11.462 0.0699999C11.6874 0.158887 11.8729 0.326615 11.984 0.542ZM10 14C11.0609 14 12.0783 13.5786 12.8284 12.8284C13.5786 12.0783 14 11.0609 14 10C14 8.93913 13.5786 7.92172 12.8284 7.17157C12.0783 6.42143 11.0609 6 10 6C8.93913 6 7.92172 6.42143 7.17157 7.17157C6.42143 7.92172 6 8.93913 6 10C6 11.0609 6.42143 12.0783 7.17157 12.8284C7.92172 13.5786 8.93913 14 10 14Z" fill="#BFBFBF"/>
+                    </svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Setting</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</aside>
+
+<div class="p-4 sm:ml-64">
+    <div>
+        <div class="grid grid-cols-3 gap-4 mb-4">
+            <div class="flex items-center  h-24 ">
+                <p class="text-2xl text-gray-400 dark:text-gray-500">
+                    Dashboard
+                </p>
+            </div>
+            <div class="flex items-center ">
+            </div>
+            <div class="flex items-center justify-center ">
+                <div class="flex ">
+                    <div class="flex items-center ms-3">
+                        <div>
+                            <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                                <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-2xl text-gray-400 dark:text-gray-500" style="padding-left: 40px">
+                    Leonardo Xaviera
+                </p>
+            </div>
+        </div>
+        <div class="flex items-center justify-center">
+        </div>
+        <div class="grid grid-cols-2 gap-4 mb-4">
+            <div class="flex">
+                <p class="text-4xl text-black-400 dark:text-gray-1000">
+                    Hello Admin, Selamat Datang Kembali! 👋
+                </p>
+            </div>
+    </div>
+        <p>Long time no see, we have a new applicants and heroes.</p>
+
+</div>
+    <div class="flex" style="margin-top: 40px;">
+        <p class="text-2xl text-black dark:text-black-1000 border-b border-gray-300">
+            Data Progress Digi
+        </p>
+
+    </div>
+    <div>
+        <div class="p-4 ">
+            <div class="grid grid-cols-4 gap-4 mb-4">
+                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
+                    <p class="mb-3 font-bold text-black-700">Total Program</p>
+                    <h5 class="mb-2 text-6xl font-bold tracking-tight text-gray-900 ">1070</h5><p>/October 2023</p>
+                </div>
+                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
+                    <p class="mb-3 font-bold text-black-700">Total Program</p>
+                    <h5 class="mb-2 text-6xl font-bold tracking-tight text-gray-900 ">1070</h5><p>/October 2023</p>
+                </div>
+                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
+                    <p class="mb-3 font-bold text-black-700">Program Baru</p>
+                    <h5 class="mb-2 text-6xl font-bold tracking-tight text-gray-900 ">4</h5>
+                </div>
+                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
+                    <p class="mb-3 font-bold text-black-700">Relawan Baru</p>
+                    <h5 class="mb-2 text-6xl font-bold tracking-tight text-gray-900 ">12</h5>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-4">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

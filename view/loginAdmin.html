@@ -1,61 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!--Font External-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/applicantForm.css" />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/form-both.css" />
     <!--Ionicon JS-->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 </head>
-
 <body class="bg-white h-fit">
-
 <div class="lp-grid">
     <div class="grid-lp-left">
-        <div class="c_landing-page-frame2">
-            <form>
-                <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example1">Username</label>
-                    <input type="email" id="form2Example1" class="form-control" />
+        <div class="form-app">
+            <h2>Login Admin</h2>
+            <p>Form login untuk Admin</p>
+            <p id="title-form">Username</p>
+            <div>
+                <input type="text" id="fname" name="firstname" placeholder="Masukkan Username">
+            </div>
+            <p id="title-form1">Password</p>
+            <div>
+                <input type="text" id="fname" name="firstname" placeholder="Masukkan Password">
+            </div>
+
+            <div class="forgot-section">
+                <div class="remember">
+                    <div class="terms">
+                        <input type="checkbox" id="terms1" name="vehicle1" value="Bike">
+                        <label for="terms1">Ingat saya </label>
+                    </div>
                 </div>
-                <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example2">Password</label>
-                    <input type="password" id="form2Example2" class="form-control" />
+                <div class="forgot-pass">
+                    Lupa Password?
                 </div>
-                <div class="row mb-4">
-                    <div class="col d-flex justify-content-center">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                            <label class="form-check-label" for="form2Example31"> Ingat saya </label>
+            </div>
+
+
+
+            <div class="cta">
+
+                <div class="navi-btn">
+                    <div class="next-btn">
+                        <div class="next">
+                            Login Sekarang
+                        </div>
+                        <div class="arrow-right">
+                            <img src="asset/img/arrow-right.png" alt="DigiHero">
                         </div>
                     </div>
-
-                    <div class="col">
-                        <a href="#!" style="width: 100%">Lupa Password?</a>
-                    </div>
                 </div>
-                <button type="button" class="btn btn-primary btn-block mb-4 bg-blue-500 text-white p-2 rounded-md" >Login</button>
-            </form>
+            </div>
         </div>
-        <div class="c_landing-page-text06">
-            <p class="c_landing-page-text07">
-                Form login untuk Applicant Admin
-            </p>
+        <div class="back-btn">
+            <a href="login.html"> <img src="asset/img/back-btn.png" alt="DigiHero"></a>
         </div>
-        <h1 class="login-who">Login Admin</h1>
 
         <div class="login-left">
             <div class="login-left01">
                 <a href="home.html">
-                <img class="login-digi-logo" src="asset/img/Digihero%20Logo.png" alt="DigiHero">
+                    <div class="login-left01">
+                        <img class="login-digi-logo" src="asset/img/Digihero%20Logo.png" alt="DigiHero">
+                    </div>
                 </a>
             </div>
             <div class="login-left02">
@@ -70,8 +88,8 @@
             </div>
         </div>
 
-    </div>
 
+    </div>
     <div class="grid-lp-right">
         <div class="slideshow-container relative">
             <div class="mySlides">
@@ -97,58 +115,62 @@
                 <span class="dot" onclick="currentSlide(4)"></span>
             </div>
         </div>
-
     </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    var slideIndex = 0;
 
-    <script>
-        var slideIndex = 0;
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
 
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-                dots[i].classList.remove("active");
-            }
-
-            slideIndex++;
-
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].classList.add("active");
-
-            setTimeout(showSlides, 3000);
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            dots[i].classList.remove("active");
         }
 
-        function currentSlide(n) {
-            showSlides(slideIndex = n - 1);
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
         }
 
-        showSlides();
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].classList.add("active");
 
-        function register() {
-            var userType = document.getElementById('userType').value;
-            var redirectUrl;
+        setTimeout(showSlides, 3000);
+    }
 
-            switch (userType) {
-                case 'applicant':
-                    redirectUrl = 'applicantForm.html';
-                    break;
-                case 'digihero':
-                    redirectUrl = 'Heroes.html';
-                    break;
-                default:
-                    alert('Invalid role selected');
-                    return;
-            }
+    function currentSlide(n) {
+        showSlides(slideIndex = n - 1);
+    }
 
-            window.location.href = redirectUrl;
+    showSlides();
+
+
+    function register() {
+        var userType = document.getElementById('userType').value;
+        var redirectUrl;
+
+        switch (userType) {
+            case 'applicant':
+                redirectUrl = 'applicantForm.html';
+                break;
+            case 'digihero':
+                redirectUrl = 'Heroes.html';
+                break;
+            default:
+                alert('Invalid role selected');
+                return;
         }
-    </script>
+
+        window.location.href = redirectUrl;
+    }
+</script>
 </body>
 </html>

@@ -1,85 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!--Font External-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/applicantForm.css" />
-    <!--Ionicon JS-->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/form-app2.css" />
+    <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 </head>
-
 <body class="bg-white h-fit">
-
 <div class="lp-grid">
     <div class="grid-lp-left">
-        <div class="c_landing-page-frame2">
-            <form>
-                <div class="mb-4">
-                    <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
-                    <input type="text" class="w-full p-2 border rounded-md" id="username" placeholder="Enter your username">
+        <div class="form-app">
+            <h2>Form Applicant #2</h2>
+            <p>Form registrasi akun sebagai applicant baru</p>
+            <p id="title-form">Username</p>
+            <div>
+                <input type="text" id="fname" name="firstname" placeholder="Masukkan Username">
+            </div>
+            <p id="title-form1">Password</p>
+            <div>
+                <input type="text" id="fname" name="firstname" placeholder="Masukkan Password">
+            </div>
+            <p id="title-form1">Konfirmasi Password</p>
+            <div>
+                <input type="text" id="fname" name="firstname" placeholder="Konfirmasi Passqord">
+            </div>
+            <div class="terms">
+                <input type="checkbox" id="terms1" name="vehicle1" value="Bike">
+                <label for="terms1">Saya setuju dengan <span style="color: #55abff;">Terms</span> dan <span style="color: #55abff;">Privacy Policy</span> yang berlaku</label>
+            </div>
+            <div class="cta">
+                <div class="navi-btn">
+                    <div class="next-btn">
+                        <div class="next">
+                            Daftar Sekarang
+                        </div>
+                        <div class="arrow-right">
+                            <img src="asset/img/arrow-right.png" alt="DigiHero">
+                        </div>
+                    </div>
                 </div>
-                <div class="mb-4">
-                    <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
-                    <input type="password" class="w-full p-2 border rounded-md" id="password" placeholder="Enter your password">
-                </div>
-                <div class="mb-4">
-                    <label for="confirmPassword" class="block text-gray-700 text-sm font-bold mb-2">Konfirmasi Password</label>
-                    <input type="password" class="w-full p-2 border rounded-md" id="confirmPassword" placeholder="Confirm your password">
-                </div>
-                <div class="mb-4">
-                    <input type="checkbox" class="form-checkbox" id="exampleCheck1">
-                    <label class="ml-2 text-gray-700 text-sm" for="exampleCheck1">
-                        Saya setuju dengan
-                        <a href="applicantForm2.html" class="text-blue-500">Terms</a>
-                        dan
-                        <a href="applicantForm2.html" class="text-blue-500">Privacy Policy</a> yang berlaku.
-                    </label>
-                </div>
-                <button type="submit" class="bg-blue-500 text-white p-2 rounded-md">
-                    <div class="div"><a href="applicantForm2.html">Submit</a></div>
-                </button>
-            </form>
+            </div>
         </div>
-        <div class="c_landing-page-text06">
-            <p class="c_landing-page-text07">
-                Form data diri sebagai applicant baru.
-            </p>
-        </div>
-        <h1 class="login-who">Form Applicant #2</h1>
-
         <div class="back-btn">
-            <a href="applicantForm.html"><img src="asset/img/back-btn.png" alt="DigiHero"></a>
+            <a href="login.html"> <img src="asset/img/back-btn.png" alt="DigiHero"></a>
         </div>
-
         <div class="login-left">
             <div class="login-left01">
                 <a href="home.html">
-                    <img class="login-digi-logo" src="asset/img/Digihero%20Logo.png" alt="DigiHero">
-                </a>
-            </div>
+                    <div class="login-left01">
+                        <img class="login-digi-logo" src="asset/img/Digihero%20Logo.png" alt="DigiHero">
+                    </div>
+                </a>            </div>
             <div class="login-left02">
                 <div class="login-form">
                     <label for="userType">Select your role:</label>
                     <select id="userType">
-                        <option value="admin">Admin</option>
                         <option value="applicant">Applicant</option>
                         <option value="digihero">Digihero</option>
+                        <option value="admin">Admin</option>
                     </select>
-                    <button onclick="login()">Login</button>
+                    <button onclick="login()">login</button>
                 </div>
             </div>
         </div>
-
     </div>
-
     <div class="grid-lp-right">
         <div class="slideshow-container relative">
             <div class="mySlides">
@@ -105,61 +103,70 @@
                 <span class="dot" onclick="currentSlide(4)"></span>
             </div>
         </div>
-
     </div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    const navLinks = document.querySelector(".nav-Links");
+    function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+        navLinks.classList.toggle("top-[9%]");
+    }
 
-    <script>
-        var slideIndex = 0;
+    var slideIndex = 0;
 
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
 
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-                dots[i].classList.remove("active");
-            }
-
-            slideIndex++;
-
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].classList.add("active");
-
-            setTimeout(showSlides, 3000);
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            dots[i].classList.remove("active");
         }
 
-        function currentSlide(n) {
-            showSlides(slideIndex = n - 1);
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
         }
 
-        showSlides();
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].classList.add("active");
 
-        function login() {
-            var userType = document.getElementById('userType').value;
-            var redirectUrl;
+        setTimeout(showSlides, 3000);
+    }
 
-            switch (userType) {
-                case 'admin':
-                    redirectUrl = 'loginAdmin.html';
-                    break;
-                case 'applicant':
-                    redirectUrl = 'loginApplicant.html';
-                    break;
-                case 'digihero':
-                    redirectUrl = 'loginHero.html';
-                    break;
-                default:
-                    alert('Invalid role selected');
-                    return;
-            }
+    function currentSlide(n) {
+        showSlides(slideIndex = n - 1);
+    }
 
-            window.location.href = redirectUrl;
+    showSlides();
+
+
+    function login() {
+        var userType = document.getElementById('userType').value;
+        var redirectUrl;
+
+        switch (userType) {
+            case 'admin':
+                redirectUrl = 'loginAdmin.html';
+                break;
+            case 'applicant':
+                redirectUrl = 'loginApplicant.html';
+                break;
+            case 'digihero':
+                redirectUrl = 'loginHero.html';
+                break;
+            default:
+                alert('Invalid role selected');
+                return;
         }
-    </script>
+
+        window.location.href = redirectUrl;
+    }
+</script>
 </body>
 </html>

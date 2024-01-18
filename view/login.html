@@ -1,42 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!--Font External-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+            rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/login.css" />
     <!--Ionicon JS-->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="js/index.js"></script>
+    <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 </head>
-
 <body class="bg-white h-fit">
 
 <div class="lp-grid">
     <div class="grid-lp-left">
         <div class="c_landing-page-frame2">
             <div class="c_landing-page-frame3">
-                <a href="Heroes.html">
-                <div class="c_landing-page-text08">
-                    <img class="char-digi" src="asset/img/digi-character.png" alt="DigiHero">
-                    <h2 class="h2-hero">Digital Heroes</h2>
-                    <p class="detail-hero">Relawan yang memberikan edukasi digital kepada masyarakat.</p>
-                </div>
+               <a href="Heroes.html">
+                   <div class="c_landing-page-text08">
+                       <img class="char-digi" src="asset/img/digi-character.png" alt="DigiHero">
+                       <h2 class="h2-hero">Digital Heroes</h2>
+                       <p class="detail-hero">Relawan yang  memberikan edukasi digital kepada masyarakat.</p>
+                   </div>
+               </a>
             </div>
-            </a>
             <div class="c_landing-page-frame4">
                 <a href="applicantForm.html">
-                <div class="c_landing-page-text10">
-                    <img class="char-app" src="asset/img/digi-applicant.png" alt="DigiHero">
-                    <h2 class="h2-app">Applicant</h2>
-                    <p class="detail-app">Masyarakat yang mengajukan pengadaan pemberian edukasi tentang teknologi.</p>
-                </div>
+                    <div class="c_landing-page-text10">
+                        <img class="char-app" src="asset/img/digi-applicant.png" alt="DigiHero">
+                        <h2 class="h2-app">Applicant</h2>
+                        <p class="detail-app">Masyarakat yang mengajukan pengadaan pemberian edukasi tentang teknologi.</p>
+                    </div>
                 </a>
             </div>
         </div>
@@ -48,22 +53,23 @@
         <h1 class="login-who">Siapakah anda didalam DigiHero?</h1>
 
         <div class="back-btn">
-            <a href="home.html"><img src="asset/img/back-btn.png" alt="DigiHero"></a>
+            <a href="home.html"> <img src="asset/img/back-btn.png" alt="DigiHero"></a>
         </div>
 
         <div class="login-left">
             <div class="login-left01">
                 <a href="home.html">
-                    <img class="login-digi-logo" src="asset/img/Digihero%20Logo.png" alt="DigiHero">
-                </a>
-            </div>
+                    <div class="login-left01">
+                        <img class="login-digi-logo" src="asset/img/Digihero%20Logo.png" alt="DigiHero">
+                    </div>
+                </a>            </div>
             <div class="login-left02">
                 <div class="login-form">
                     <label for="userType">Select your role:</label>
                     <select id="userType">
-                        <option value="admin">Admin</option>
                         <option value="applicant">Applicant</option>
                         <option value="digihero">Digihero</option>
+                        <option value="admin">Admin</option>
                     </select>
                     <button onclick="login()">Login</button>
                 </div>
@@ -71,7 +77,6 @@
         </div>
 
     </div>
-
     <div class="grid-lp-right">
         <div class="slideshow-container relative">
             <div class="mySlides">
@@ -97,11 +102,17 @@
                 <span class="dot" onclick="currentSlide(4)"></span>
             </div>
         </div>
-
-
     </div>
-
+</div>
+</div>
+</div>
+</div>
 <script>
+    const navLinks = document.querySelector(".nav-Links");
+    function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+        navLinks.classList.toggle("top-[9%]");
+    }
     var slideIndex = 0;
 
     function showSlides() {
@@ -132,24 +143,26 @@
 
     showSlides();
 
+
     function login() {
         var userType = document.getElementById('userType').value;
         var redirectUrl;
 
         switch (userType) {
-            case 'admin':
-                redirectUrl = 'admin.html';
-                break;
             case 'applicant':
-                redirectUrl = 'applicant.html';
+                redirectUrl = 'loginApplicant.html';
                 break;
             case 'digihero':
-                redirectUrl = 'digihero.html';
+                redirectUrl = 'loginHero.html';
+                break;
+            case 'admin':
+                redirectUrl = 'loginAdmin.html';
                 break;
             default:
                 alert('Invalid role selected');
                 return;
         }
+
         window.location.href = redirectUrl;
     }
 </script>

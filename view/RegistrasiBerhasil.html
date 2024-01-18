@@ -1,61 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!--Font External-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+            rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/registrasiSuccess.css" />
-    <!--Ionicon JS-->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 </head>
-
 <body class="bg-white h-fit">
 
 <div class="lp-grid">
     <div class="grid-lp-left">
         <div class="c_landing-page-frame2">
-            <button type="submit" class="bg-blue-500 text-white p-2 rounded-md">
-                <div class="div"><a href="home.html">Kembali Ke Beranda</a></div>
-            </button>
-            <button type="submit" class="bg-blue-500 text-white p-2 rounded-md">
-                <div class="div"><a href="applicantForm2.html">Login Sekarang</a></div>
-            </button>
+            <div class="c_landing-page-frame3">
+                Kembali Ke Beranda
+            </div>
+            <div class="c_landing-page-frame4">
+                Login Sekarang
+            </div>
         </div>
         <div class="c_landing-page-text06">
             <p class="c_landing-page-text07">
                 Akun anda telah terdaftar dan diaktifkan, pilih opsi berikut untuk menentukan langkah anda berikutnya.
             </p>
         </div>
-        <h1 class="login-who">Registrasi Berhasil, Akun Anda Telah Diaktifkan!</h1>
+        <h1 class="login-who">Registerasi Berhasil, Akun Anda Telah Diaktifkan</h1>
+
+        <div class="back-btn">
+            <img src="asset/img/back-btn.png" alt="DigiHero">
+        </div>
 
         <div class="login-left">
             <div class="login-left01">
-                <img class="login-digi-logo" src="asset/img/Digihero%20Logo.png" alt="DigiHero">
+                <a href="home.html">
+                    <div class="login-left01">
+                        <img class="login-digi-logo" src="asset/img/Digihero%20Logo.png" alt="DigiHero">
+                    </div>
+                </a>
             </div>
             <div class="login-left02">
                 <div class="login-form">
                     <label for="userType">Select your role:</label>
                     <select id="userType">
-                        <option value="admin">Admin</option>
                         <option value="applicant">Applicant</option>
                         <option value="digihero">Digihero</option>
                     </select>
-                    <button onclick="login()">Login</button>
+                    <button onclick="login()">Register</button>
                 </div>
             </div>
         </div>
 
     </div>
-
     <div class="grid-lp-right">
         <div class="slideshow-container relative">
-            <div class="mySlides">
+            <div class="mySlides rounded">
                 <img class="img-digi1" src="asset/img/anak.jpg" alt="DigiHero">
                 <div class="slide-text">Kegiatan Edukasi Di Palangkaraya, Kalteng</div>
             </div>
@@ -79,61 +90,66 @@
             </div>
         </div>
 
-
     </div>
-
-    <script>
+</div>
+</div>
+</div>
+</div>
+<script>
+    const navLinks = document.querySelector(".nav-Links");
+    function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+        navLinks.classList.toggle("top-[9%]");
+    }
         var slideIndex = 0;
 
         function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
 
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-                dots[i].classList.remove("active");
-            }
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        dots[i].classList.remove("active");
+    }
 
-            slideIndex++;
+        slideIndex++;
 
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
+        if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
 
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].classList.add("active");
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].classList.add("active");
 
-            setTimeout(showSlides, 3000);
-        }
+        setTimeout(showSlides, 3000);
+    }
 
         function currentSlide(n) {
-            showSlides(slideIndex = n - 1);
-        }
+        showSlides(slideIndex = n - 1);
+    }
 
         showSlides();
 
-        function login() {
-            var userType = document.getElementById('userType').value;
-            var redirectUrl;
 
-            switch (userType) {
-                case 'admin':
-                    redirectUrl = 'admin.html';
-                    break;
-                case 'applicant':
-                    redirectUrl = 'applicant.html';
-                    break;
-                case 'digihero':
-                    redirectUrl = 'digihero.html';
-                    break;
-                default:
-                    alert('Invalid role selected');
-                    return;
-            }
+        function register() {
+        var userType = document.getElementById('userType').value;
+        var redirectUrl;
 
-            window.location.href = redirectUrl;
-        }
-    </script>
+        switch (userType) {
+        case 'applicant':
+        redirectUrl = 'applicantForm.html';
+        break;
+        case 'digihero':
+        redirectUrl = 'Heroes.html';
+        break;
+        default:
+        alert('Invalid role selected');
+        return;
+    }
+
+        window.location.href = redirectUrl;
+    }
+</script>
 </body>
 </html>
