@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Font External-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css"/>
+    <!--Ionicon JS-->
+    <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+</head>
+<body class="bg-white h-fit">
+<header class="header-shadow sticky top-0 z-10">
+    <nav class="flex justify-between items-center w-[100%] px-8">
+        <div>
+            <img class="md:w-120" src="asset/img/Digihero%20Logo.png" />
+        </div>
+        <div
+                class="nav-Links md:static absolute bg-white md:min-h-fit min-h-[40vh] left-0 top-[-600%] md:w-auto w-full flex items-center px-5 shadow-md md:shadow-none"
+        >
+            <ul
+                    class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"
+            >
+                <li>
+                    <a class="hover:text-gray-500" href="#">Home</a>
+                </li>
+                <li>
+                    <a class="hover:text-gray-500" href="#">Tentang Kami</a>
+                </li>
+                <li>
+                    <a class="hover:text-gray-500" href="#">Program Digi</a>
+                </li>
+                <li>
+                    <a class="hover:text-gray-500" href="#">Contact Digi</a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex items-center gap-6">
+            <button
+                    class="bg-[#012a4a] text-white login-btn rounded-full hover:bg-[#165e94]"
+            >
+                Login
+            </button>
+            <ion-icon
+                    onclick="onToggleMenu(this)"
+                    name="menu"
+                    class="text-3xl cursor-pointer md:hidden"
+            ></ion-icon>
+        </div>
+    </nav>
+</header>
+<div class="lp-grid">
+    <div class="grid-lp-left">
+        <div class="c_landing-page-frame2">
+            <div class="c_landing-page-frame3">
+                <div class="c_landing-page-text08">
+                    <p class="c_landing-page-text09"><a href="login.html">Get Started</a></p>
+                </div>
+            </div>
+            <div class="c_landing-page-frame4">
+                <div class="c_landing-page-text10">
+                    <p class="c_landing-page-text11">Lihat Selengkapnya</p>
+                </div>
+            </div>
+        </div>
+        <div class="c_landing-page-text06">
+            <p class="c_landing-page-text07">
+                Platform penghubung terbaik antara masyarakat dan relawan digital untuk
+                pemberian edukasi digital di berbagai daerah.
+            </p>
+        </div>
+        <div class="c_landing-page-text02">
+            <p class="c_landing-page-text03">
+              <span class="c_landing-page-text04">
+                Platform Terbaik Untuk Program
+              </span>
+                <span class="c_landing-page-text05">Edukasi Digital</span>
+            </p>
+        </div>
+        <div class="c_landing-page-frame1">
+            <div class="c_landing-page-text">
+                <p class="c_landing-page-text01">
+                    #1 Programs and Volutenteers DigiEdu
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="grid-lp-right">
+        <div>
+            <img class="img-digi" src="asset/img/DigiImage.png" alt="DigiHero">
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    var slideIndex = 0;
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            dots[i].classList.remove("active");
+        }
+
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].classList.add("active");
+
+        setTimeout(showSlides, 3000);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n - 1);
+    }
+
+
+    function login() {
+        var userType = document.getElementById('userType').value;
+        var redirectUrl;
+
+        switch (userType) {
+            case 'admin':
+                redirectUrl = 'admin.html';
+                break;
+            case 'applicant':
+                redirectUrl = 'applicant.html';
+                break;
+            case 'digihero':
+                redirectUrl = 'digihero.html';
+                break;
+            default:
+                alert('Invalid role selected');
+                return;
+        }
+
+        window.location.href = redirectUrl;
+    }
+</script>
+</body>
+</html>
